@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72FF21731DF7DCCF00CD7EC4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8BE99A1DBF9B4C004A4C0A /* MapKit.framework */; };
+		72FF21741DF7DD1E00CD7EC4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8BE99A1DBF9B4C004A4C0A /* MapKit.framework */; };
+		72FF21751DF7DD1E00CD7EC4 /* MapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF8BE99A1DBF9B4C004A4C0A /* MapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF8BE9861DBF9A4B004A4C0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE9851DBF9A4B004A4C0A /* AppDelegate.swift */; };
 		AF8BE9881DBF9A4B004A4C0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE9871DBF9A4B004A4C0A /* ViewController.swift */; };
 		AF8BE98B1DBF9A4B004A4C0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8BE9891DBF9A4B004A4C0A /* Main.storyboard */; };
@@ -15,6 +18,20 @@
 		AF8BE9981DBF9A66004A4C0A /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF8BE9971DBF9A66004A4C0A /* Places.plist */; };
 		AFC772561DBFA22C0062D617 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC772551DBFA22C0062D617 /* Places.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		72FF21761DF7DD1E00CD7EC4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				72FF21751DF7DD1E00CD7EC4 /* MapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AF8BE9821DBF9A4B004A4C0A /* MapKit Starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapKit Starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72FF21741DF7DD1E00CD7EC4 /* MapKit.framework in Frameworks */,
+				72FF21731DF7DCCF00CD7EC4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +109,7 @@
 				AF8BE97E1DBF9A4B004A4C0A /* Sources */,
 				AF8BE97F1DBF9A4B004A4C0A /* Frameworks */,
 				AF8BE9801DBF9A4B004A4C0A /* Resources */,
+				72FF21761DF7DD1E00CD7EC4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -112,7 +132,7 @@
 				TargetAttributes = {
 					AF8BE9811DBF9A4B004A4C0A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = X872NB7KGG;
+						DevelopmentTeam = KT3EESWU53;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -278,7 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X872NB7KGG;
+				DEVELOPMENT_TEAM = KT3EESWU53;
 				INFOPLIST_FILE = "MapKit Starter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranjalsatija.MapKit-Starter";
@@ -291,7 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X872NB7KGG;
+				DEVELOPMENT_TEAM = KT3EESWU53;
 				INFOPLIST_FILE = "MapKit Starter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranjalsatija.MapKit-Starter";
