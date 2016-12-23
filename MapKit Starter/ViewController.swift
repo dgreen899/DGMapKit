@@ -73,6 +73,8 @@ extension ViewController: MKMapViewDelegate {
         else {
             let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotationView") ?? MKAnnotationView()
             annotationView.image = UIImage(named: "place icon")
+                    annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            annotationView.canShowCallout = true
             return annotationView
         }
     }
@@ -90,8 +92,25 @@ extension ViewController: MKMapViewDelegate {
             renderer.strokeColor = UIColor.orange
             renderer.lineWidth = 3
             return renderer
+            
+        } else if overlay is MKPolygon {
+            let renderer = MKPolygonRenderer(polygon: overlay as! MKPolygon)
+            renderer.fillColor = UIColor.black.withAlphaComponent(0.5)
+            renderer.strokeColor = UIColor.blue
+            renderer.lineWidth = 2
+            return renderer
+
         }
+
         
         return MKOverlayRenderer()
+    }
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard let annotation = view.annotation as? Place, let title = annotation.title else { return }
+        
+        let alertController = UIAlertController(title: "Welcome to \(title)", message: "You've selected \(title)", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
